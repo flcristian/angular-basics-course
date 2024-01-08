@@ -1,0 +1,5 @@
+<section>
+  <h3>Server {{serverId}}</h3>
+  <span>Status : </span>
+  <span [ngClass]="{online: serverStatus, offline: !serverStatus}" [ngStyle]="{color: getColor()}">{{serverStatus ? "Online" : "Offline"}}</span><br>
+</section>

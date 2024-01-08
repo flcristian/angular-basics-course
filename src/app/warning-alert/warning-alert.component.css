@@ -1,0 +1,7 @@
+.warning {
+  background-color: mistyrose;
+  color: black;
+  font-weight: 600;
+  padding: 20px;
+  border: 2px solid red;
+}
