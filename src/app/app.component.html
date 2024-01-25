@@ -4,6 +4,11 @@
 
     <hr>
 
-    <app-servers></app-servers>
+    <app-cockpit [servers]="servers" (newServer)="onServerCreated($event)"></app-cockpit>
+
+    <section>
+      <app-server *ngFor="let server of servers" [serverId]="server.serverId" [serverStatus]="server.serverStatus"></app-server>
+      <p *ngIf="servers.length == 0" [ngStyle]="{'font-weight': 600, color: 'crimson'}">No server was created.</p>
+    </section>
   </section>
 </main>
